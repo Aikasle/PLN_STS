@@ -76,3 +76,18 @@ bastante mejor. Pero aun podemos mejorar estos resultados, entrenando
 el modelo con nuestros propios datos.
 
 ## Z2
+
+Para este apartado vamos a usar otro metodo, el fine tunning. En vez de entrenar un modelo desde cero o cargar un modelo generico, he cargado un modelo estandar y lo he entrenado con mis datos. Con esto he creado un modelo mas ajustado a mis necesidades, sin tener que entrenarlo desde cero.
+
+En este caso voy a ajustar un model de _sentence embeddings_ especificamente _sentence-transformers/all-MiniLM-L6-v2_ (el cual he usado en Z1.2
+
+Simplemente cargamos los datos y los estructuramos en un _DataLoader_ (train y val). Luego cargamos el modelo, definimos la funcion de perdidia (CosineSimilarityLoss, al igual que en Z1.2) y lo entrenamos con el _DataLoader_ de entrenmaiento. 
+
+Una vez entrenado miramos los resultados con el conjunto de validacion y los compramos con los originales con la correlacion de pearson.
+
+Estos han sido los resultados:
+```
+Correlación Pearson: 0.8595
+``` 
+
+Podemos ver que es mejor que la del _sentence embeddings_ que no han sido ajustados. 
