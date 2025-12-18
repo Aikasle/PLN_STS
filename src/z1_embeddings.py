@@ -27,7 +27,7 @@ def main():
     print(f"Resultados Sentence Embeddings ({model_name}):")
     print(f"---------------------")
     print(f"Muestras evaluadas: {len(human_scores)}")
-    print(f"Correlación Pearson: {pearson_corr)
+    print(f"Correlación Pearson: {pearson_corr}")
 
 if __name__ == "__main__":
     main()

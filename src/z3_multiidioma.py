@@ -52,8 +52,8 @@ def main():
     evaluar_con_pearson("N-Grams (Español)", sims_ngram, test_scores)
 
     print("\n[Experimento 2] Modelo Z2 (Entrenado en Inglés) evaluado en Español")
-    # path_z2 = 'sentence-transformers/all-MiniLM-L6-v2'
-    path_z2 = './output/z2_siamese_finetuned'
+    path_z2 = 'sentence-transformers/all-MiniLM-L6-v2'
+    # path_z2 = './output/z2_siamese_finetuned'
     
     # if os.path.exists(path_z2):
     if True:
